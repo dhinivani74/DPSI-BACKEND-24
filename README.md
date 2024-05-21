@@ -1,0 +1,11 @@
+# BELAJAR APLIKASI BACKEND MENGGUNAKAN NODEJS DAN EXPRESS
+
+## Author
+
+Nama:
+
+Dini Oktivani Nugroho
+
+Nim:
+
+2200016074
