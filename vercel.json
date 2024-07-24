@@ -1,0 +1,36 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/api/$1" },
+      { "src": "/(.*)", "dest": "/public/$1" }
+    ],
+    "redirects": [
+      { "source": "/old-route", "destination": "/new-route", "statusCode": 301 }
+    ],
+    "rewrites": [
+      { "source": "/rewrite-source", "destination": "/rewrite-destination" }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          { "key": "X-Custom-Header", "value": "my-value" },
+          { "key": "X-Another-Custom-Header", "value": "another-value" }
+        ]
+      }
+    ],
+    "env": {
+      "CUSTOM_ENV_VAR": "value"
+    }
+  }
+  
